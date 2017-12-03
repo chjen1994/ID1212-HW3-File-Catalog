@@ -20,7 +20,6 @@ import server_controller.controller;
  */
 public class main {
 
-
     public static void main(String[] args) {
         try {
             main server = new main();
@@ -44,9 +43,6 @@ public class main {
             Naming.rebind(fileSys.FILESYSTEM_NAME_IN_REGISTRY, new controller());
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        }
-        
+        }  
     }
-
-
 }

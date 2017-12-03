@@ -105,7 +105,7 @@ public class controller extends UnicastRemoteObject implements fileSys  {
             transfer fileTransfer = new transfer();
             fileTransfer.fileSending(filename);
         }else {
-            throw new badInput("The file is either private or not in server directory! "+filesSystem.download(filename, clientHandler));
+            throw new badInput("error at server controller download! ");
         }
     }
 
@@ -117,7 +117,7 @@ public class controller extends UnicastRemoteObject implements fileSys  {
     public void delete(String username, String filename)throws RemoteException,FileException {
         handle_client clientHandler = clientsSystem.getClient(username);
         if (!filesSystem.delete(filename, clientHandler)){
-            throw new FileException("The file is either private or public with read permissions or not in server directory!");
+            throw new FileException("error at server controller delete!");
         }
     }
 

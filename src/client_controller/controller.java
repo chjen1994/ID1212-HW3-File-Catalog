@@ -31,9 +31,9 @@ public class controller {
     public void finishUpload(String path, String filename) {
         try {
             connection.fileSending(path, filename);
-            System.out.println("Upload success!");
+            System.out.println("Uploaded");
         } catch (Exception e) {
-            System.out.println("Upload failed!");
+            System.out.println("Error when uploading");
         }
     }
     
@@ -51,9 +51,9 @@ public class controller {
     public void finishDownload() {
         try {
             connection.fileReceiving();
-            System.out.println("Download success!");
+            System.out.println("Downloaded");
         } catch (Exception e) {
-            System.out.println("Download failed!");
+            System.out.println("Error when downloading");
         }
     }
     

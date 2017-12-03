@@ -37,7 +37,7 @@ public class handle_client_command {
         switch (words[0].toUpperCase()){
             case "REGISTER":
                 Command = command.REGISTER;
-                setCredentials(words);
+                setClientUsrPass(words);
                 break;
             case "UNREGISTER":
                 Command = command.UNREGISTER;
@@ -45,7 +45,7 @@ public class handle_client_command {
                 break;
             case "LOGIN":
                 Command = command.LOGIN;
-                setCredentials(words);
+                setClientUsrPass(words);
                 break;
             case "LOGOUT":
                 Command = command.LOGOUT;
@@ -79,7 +79,7 @@ public class handle_client_command {
         return new fileDTO(Command, username, password, filename, path, access, permissions, check, uploadReady);
     }
     
-    private void setCredentials(String[] words){
+    private void setClientUsrPass(String[] words){
         if (words.length != 3){
             check = false;
         } else {

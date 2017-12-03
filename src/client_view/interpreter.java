@@ -68,7 +68,7 @@ public class interpreter implements Runnable{
                         case REGISTER:
                             try {
                                 fileSystem.register(file.getUsername(), file.getPassword());
-                                System.out.println("Registration success! Login to continue!\n");
+                                System.out.println("Registration success! Continue to Login!\n");
                             } catch (Exception e){
                                 System.out.println(e.getMessage());
                             }
@@ -242,15 +242,15 @@ public class interpreter implements Runnable{
     private void printLoginMsg(String name){
         System.out.println("\nHi " + name +"!\n" +
                 "Available Commands:\n\n" +
-                "upload <path> <private>                            //to upload a private file//\n" +
-                "upload <path> <public> <write or read>             //to upload a public file//\n" +
-                "download <filename>                                //to download a file//\n" +
-                "list                                               //to view all the available files//\n" +
-                "delete <filename>                                  //to delete a specific file//\n" +
-                "status <filename>                                  //to check the status of a specific public file//\n" +
-                "unregister                                         //to unregister your account//\n" +
-                "logout                                             //to logout from catalog//\n" +
-                "quit                                               //to exit the system//\n");
+                "upload <path> <private>                            //Upload private file//\n" +
+                "upload <path> <public> <write or read>             //Upload public file//\n" +
+                "download <filename>                                //Download specific file//\n" +
+                "list                                               //List all the available files//\n" +
+                "delete <filename>                                  //Delete a specific file//\n" +
+                "status <filename>                                  //Check the status of a specific public file//\n" +
+                "unregister                                         //Unregister the account//\n" +
+                "logout                                             //Logout from File Catalog//\n" +
+                "quit                                               //Quit File Catalog//\n");
     }
     private void printWrongCommandLogin(){
         System.out.println("\nWrong command!\nThe correct commands are: " +

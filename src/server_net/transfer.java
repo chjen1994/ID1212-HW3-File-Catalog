@@ -13,16 +13,14 @@ import java.net.Socket;
  * @author davidren
  */
 public class transfer {
-    public transfer(){
-        
-    }
+    public transfer(){ }
+    
     public void fileReceiving() throws IOException {
         
-        
+        //socket
         ServerSocket serverSocket=new ServerSocket(8080);
-        System.out.println("Waiting for connection...");
         Socket socket = serverSocket.accept();
-        
+        //set up input and output
         DataInputStream input=new DataInputStream(socket.getInputStream());
         DataOutputStream output=new DataOutputStream(socket.getOutputStream());
         
@@ -51,7 +49,6 @@ public class transfer {
         
         
         ServerSocket serverSocket=new ServerSocket(8080);
-        System.out.println("Waiting for connection...");
         Socket socket = serverSocket.accept();
         
         
